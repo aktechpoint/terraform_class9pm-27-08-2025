@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishek Singh | Portfolio</title>
+  <style>
+    :root {
+      --primary: #00c3ff;
+      --secondary: #a78bfa;
+      --dark: #0f172a;
+      --light: #f9fafb;
+      --text: #1e293b;
+    }
+    body {
+      margin: 0;
+      font-family: "Inter", Arial, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white; text-align: center;
+      padding: 2rem 1rem;
+    }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    nav { margin-top: 1rem; }
+    nav a {
+      color: white; margin: 0 10px;
+      text-decoration: none; font-weight: bold;
+    }
+    section { padding: 3rem 1.5rem; max-width: 1000px; margin: auto; }
+    h2 { color: var(--dark); margin-bottom: 1rem; }
+    .card {
+      background: white; border-radius: 12px;
+      padding: 1.5rem; margin-bottom: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    .grid { display: grid; gap: 20px; }
+    .projects { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+    .blog { grid-template-columns: 1fr; }
+    footer {
+      text-align: center;
+      padding: 1rem; background: var(--dark); color: white;
+    }
+    a.btn {
+      display: inline-block; padding: 10px 18px; border-radius: 8px;
+      background: var(--primary); color: white; text-decoration: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Abhishek Singh</h1>
+    <p>Full Stack Developer · DevOps Engineer</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I’m Abhishek, a developer experienced in Java, Spring Boot, Angular, AWS, and DevOps tools. I love automation and building scalable apps.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      Java · Spring Boot · Angular · Docker · Kubernetes · Terraform · Jenkins · AWS · Git · SQL
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid projects">
+      <div class="card">
+        <h3>🚀 Student Management</h3>
+        <p>Spring Boot + Angular app with S3 image upload.</p>
+      </div>
+      <div class="card">
+        <h3>☁️ AWS DevOps Infra</h3>
+        <p>Terraform automation for EC2, ALB, AutoScaling.</p>
+      </div>
+      <div class="card">
+        <h3>📱 Attendance App</h3>
+        <p>Android app with GPS + Camera.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <h2>Blog</h2>
+    <div class="grid blog">
+      <div class="card">
+        <h3>Getting Started with Spring Boot</h3>
+        <p>A beginner’s guide to building REST APIs with Spring Boot.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+      <div class="card">
+        <h3>Automating AWS with Terraform</h3>
+        <p>How I use Terraform to deploy scalable infra in minutes.</p>
+        <a href="#" class="btn">Read More</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+      <p>Email: <a href="mailto:abhishek@example.com">abhishek@example.com</a></p>
+      <p>GitHub: <a href="https://github.com/aktechpoint">github.com/aktechpoint</a></p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Abhishek Singh | All rights reserved
+  </footer>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Abhishek Singh | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --primary:#06b6d4; --secondary:#7c3aed;
+      --bg:#0f172a; --text:#e2e8f0; --muted:#94a3b8;
+    }
+    body{margin:0;font-family:"Inter",sans-serif;background:var(--bg);color:var(--text);}
+    header{position:sticky;top:0;background:#0f172acc;padding:1rem;backdrop-filter:blur(6px);z-index:100;}
+    nav{display:flex;justify-content:space-between;align-items:center;}
+    nav a{margin-left:1rem;color:var(--muted);text-decoration:none;font-weight:600;}
+    nav a:hover{color:var(--primary);}
+    .hero{padding:4rem 1rem;text-align:center;}
+    .hero h1{font-size:3rem;background:linear-gradient(135deg,var(--primary),var(--secondary));-webkit-background-clip:text;color:transparent;animation:slide 4s infinite alternate;}
+    @keyframes slide{0%{letter-spacing:0;}100%{letter-spacing:3px;}}
+    section{padding:4rem 1rem;max-width:1000px;margin:auto;}
+    h2{color:var(--primary);margin-bottom:1rem;}
+    .skills span{display:inline-block;background:#1e293b;padding:6px 12px;border-radius:8px;margin:4px;}
+    .bar{background:#1e293b;border-radius:8px;overflow:hidden;margin:.5rem 0;}
+    .bar div{height:12px;background:linear-gradient(90deg,var(--primary),var(--secondary));}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1rem;}
+    .card{background:#1e293b;padding:1rem;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.3);}
+    .blog-preview{display:grid;gap:1rem;}
+    footer{text-align:center;padding:2rem;background:#1e293b;color:var(--muted);}
+  </style>
+</head>
+<body>
+<header>
+  <nav>
+    <div><strong>Abhishek Singh</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Hello, I'm Abhishek 👋</h1>
+  <p>Full Stack Developer | DevOps Engineer | Cloud Enthusiast</p>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>I’m Abhishek, passionate about building scalable systems and sleek UIs. Skilled in Java, Spring Boot, Angular, Docker, and AWS. I love DevOps automation and mentoring juniors.</p>
+  <ul>
+    <li>🌍 Based in India</li>
+    <li>🛠 4+ years of experience</li>
+    <li>🎯 Goal: Cloud-native solutions</li>
+  </ul>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills">
+    <span>Java</span><span>Spring Boot</span><span>Angular</span><span>AWS</span><span>Terraform</span><span>Docker</span>
+  </div>
+  <div class="bar"><div style="width:90%"></div></div>
+  <div class="bar"><div style="width:80%"></div></div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>Student Management</h3>
+      <p>CRUD + image upload (Spring Boot + Angular)</p>
+    </div>
+    <div class="card">
+      <h3>AWS Infra Automation</h3>
+      <p>Terraform code for ALB, ASG, and EC2 scaling</p>
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <h2>Blog</h2>
+  <div class="blog-preview">
+    <div class="card">
+      <h3>Spring Boot REST Best Practices</h3>
+      <p>How to design clean APIs with error handling & validation.</p>
+    </div>
+    <div class="card">
+      <h3>DevOps with Terraform</h3>
+      <p>Automating AWS infra in < 5 minutes.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:abhishek@example.com">abhishek@example.com</a></p>
+  <p>GitHub: <a href="https://github.com/aktechpoint">github.com/aktechpoint</a></p>
+</section>
+
+<footer>
+  <p>© 2025 Abhishek Singh | All rights reserved</p>
+</footer>
+</body>
+</html>
