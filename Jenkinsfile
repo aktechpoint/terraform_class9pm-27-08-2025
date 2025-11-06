@@ -5,7 +5,8 @@ pipeline {
         TF_DIR = "day-2_instance"
     }
 
-    stage('Terraform Init') {
+    stages {
+        stage('Terraform Init') {
             steps {
                 dir("${TF_DIR}") {
                     echo "Initializing Terraform in ${TF_DIR}..."
@@ -27,7 +28,6 @@ pipeline {
             steps {
                 dir("${TF_DIR}") {
                     echo "Applying Terraform plan..."
-                    // Auto-approve so no manual input is required
                     sh 'terraform apply -auto-approve tfplan'
                 }
             }
